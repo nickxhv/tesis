@@ -1,0 +1,50 @@
+---
+title: "Mi tesis de grado"
+subtitle: "Para graduarme"
+author: "Nick Xavier Hurtado Valladolid"
+date: "2026/12/31"
+format:
+  pdf:
+    pdf-engine: pdflatex
+    papersize: letter
+    documentclass: book
+    toc: false
+    lang: es
+    fontsize: 11pt
+    fontfamily: "kpfonts"
+    number-sections: true
+    geometry:
+      - left=3.5cm
+      - right=2.5cm
+      - top=2.5cm
+      - bottom=2.5cm
+---
+
+
+
+# Resumen {.unnumbered}
+{{< incluide }}
+# Introducción
+Este es el inicio de tu primer capítulo. Puedes empezar a describir la justificación del problema.
+
+# Marco Teórico
+## Antecedentes
+Revisión de la literatura científica existente aquí.
+
+## Bases Teóricas
+Conceptos clave de tu investigación.
+
+# Metodología
+Aquí detallas el enfoque, la muestra y las herramientas estadísticas de R que usarás.
+
+# Resultados
+Puedes insertar bloques de código de R directamente para generar tablas o gráficos automatizados:
+
+```{r}
+#| label: fig-grafico-prueba
+#| fig-cap: "Análisis preliminar de los datos de la tesis"
+plot(cars)
+```
+
+# Conclusiones
+Tus conclusiones finales.

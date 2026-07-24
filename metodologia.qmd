@@ -1,0 +1,6 @@
+## Consideraciones Metodológicas
+
+Se incluirá en forma general, los diferentes métodos y/o técnicas a
+implementarse en el desarrollo del proyecto. Los métodos y/o técnicas
+específicas de recopilación de información, selección y análisis de éstos,
+debiendo incluirse en las respectivas etapas o fases a considerar

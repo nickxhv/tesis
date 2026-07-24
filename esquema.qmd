@@ -1,0 +1,8 @@
+Escogido el problema apropiado, se establecerá en forma concreta los
+aspectos del contenido del proyecto y /o Trabajo de Investigación a
+desarrollarse sobre la base de un esquema capitular tentativo. La estructura
+interna del trabajo de Investigación es la parte más importante, cada uno de los
+
+aspectos debe estar itemizado en capítulos y/o subcapítulos, guardando una
+secuencia lógica con la hipótesis a demostrar de tal forma que cada paso a seguir
+permita llegar a conclusiones.

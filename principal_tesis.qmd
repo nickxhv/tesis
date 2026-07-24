@@ -3,13 +3,13 @@ title: "Mi tesis de grado"
 subtitle: "Para graduarme"
 author: "Nick Xavier Hurtado Valladolid"
 date: "2026/12/31"
+lang: "es-CO"
 format:
   pdf:
-    pdf-engine: pdflatex
+    pdf-engine: xelatex
     papersize: letter
     documentclass: book
     toc: false
-    lang: es
     fontsize: 11pt
     fontfamily: "kpfonts"
     number-sections: true
@@ -20,31 +20,60 @@ format:
       - bottom=2.5cm
 ---
 
+\frontmatter
 
+# Dedicatoria
 
-# Resumen {.unnumbered}
-{{< incluide }}
+*A mi familia, por el constante apoyo*
+
+*A mi futura novia, Ximena, por su inconmesurable paciencia en mis noches de inmsonio para el desarrollo de esta tesis*
+
+# Agradecimientos
+
+# Resumen
+
+# Abstract
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+
 # Introducción
-Este es el inicio de tu primer capítulo. Puedes empezar a describir la justificación del problema.
 
-# Marco Teórico
-## Antecedentes
-Revisión de la literatura científica existente aquí.
+{{< include introduccion.qmd >}}
 
-## Bases Teóricas
-Conceptos clave de tu investigación.
+# Definición y Planteamiento del Problema
+
+{{< include definicion.qmd >}}
+
+
+# Hipotesis 
+
+{{< include hipotesis.qmd >}}
+
+# Objetivos
+
+{{< include objetivos.qmd >}} 
+
+# Marco Teorico
+
+{{< include marco.qmd >}} 
+
 
 # Metodología
-Aquí detallas el enfoque, la muestra y las herramientas estadísticas de R que usarás.
 
-# Resultados
-Puedes insertar bloques de código de R directamente para generar tablas o gráficos automatizados:
+{{< include metodologia.qmd >}}
 
-```{r}
-#| label: fig-grafico-prueba
-#| fig-cap: "Análisis preliminar de los datos de la tesis"
-plot(cars)
-```
 
-# Conclusiones
-Tus conclusiones finales.
+# Esquema del proyecto de investigación
+
+{{< include esquema.qmd >}}
+
+
+\backmatter
+
+# Bibliografía 
+
+# Anexos

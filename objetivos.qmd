@@ -1,4 +1,13 @@
-Deben establecerse en forma concreta y concisa como sea posible el objetivo u
-objetivos fundamentales que persigue el trabajo. Son susceptibles de
-cuantificarse y podría hablarse de metas. Son de conocimiento y de solución
-de problemas.
+# Objetivos
+
+## Objetivos General
+
+Estimar el grado de sincronización de los ciclos económicos de Bolivia, Colombia, Ecuador y Perú mediante un modelo de espacio de estados con filtro de Kalman, en el periodo \[2000 - 2019\].
+
+## Objetivos Específicos
+
+1.  Extraer el componente cíclico del PBI real de cada país mediante un modelo estructural de series de tiempo (tendencia local lineal + ciclo estocástico).
+
+2.  Estimar un factor cíclico común regional y las cargas factoriales de cada país mediante un modelo de factor dinámico.
+
+3.  Comparar los resultados obtenidos con métodos tradicionales (filtro HP, correlaciones, índice de concordancia de Harding-Pagan) para evaluar la robustez de las conclusiones.

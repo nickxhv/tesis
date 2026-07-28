@@ -1,8 +1,6 @@
 ---
-title: "Mi tesis de grado"
-subtitle: "Para graduarme"
-author: "Nick Xavier Hurtado Valladolid"
-date: "2026/12/31"
+institute: "Facultad de Ciencias económicas" 
+date: ""
 lang: "es-CO"
 format:
   pdf:
@@ -13,11 +11,11 @@ format:
     fontsize: 11pt
     fontfamily: "kpfonts"
     number-sections: true
-    geometry:
-      - left=3.5cm
-      - right=2.5cm
-      - top=2.5cm
-      - bottom=2.5cm
+    classoption: ["letterpaper", "12pt"]
+    geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
+    include-before-body: caratula/cover_page.tex
+    header-includes:
+      - \usepackage{setspace}
 ---
 
 \frontmatter
@@ -48,32 +46,28 @@ format:
 
 {{< include definicion.qmd >}}
 
-
-# Hipotesis 
+<!-- # Hipotesis -->
 
 {{< include hipotesis.qmd >}}
 
-# Objetivos
+<!-- # Objetivos -->
 
-{{< include objetivos.qmd >}} 
+{{< include objetivos.qmd >}}
 
 # Marco Teorico
 
-{{< include marco.qmd >}} 
-
+{{< include marco.qmd >}}
 
 # Metodología
 
 {{< include metodologia.qmd >}}
 
-
 # Esquema del proyecto de investigación
 
 {{< include esquema.qmd >}}
 
-
 \backmatter
 
-# Bibliografía 
+# Bibliografía
 
 # Anexos

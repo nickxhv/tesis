@@ -1,0 +1,39 @@
+## Identificación del Problema
+
+
+## Delimitación del Problema
+
+
+##  Formulación del Problema
+
+### Problema General
+
+¿Cuál es el nivel de sincronización de los ciclos económicos de Perú, Bolivia, Ecuador y Colombia durante el periodo 2000-2019?
+```{r}
+
+```
+
+### Problemas específicos
+
+- ¿Existe un factor cíclico común que explique de manera estadísticamente significativa una parte relevante de las fluctuaciones cíclicas del PBI de estos cuatro países?
+
+- ¿Cuál es el grado de sensibilidad de cada uno de los cuatro países respecto a dicho factor común?
+
+- ¿Qué proporción de la varianza cíclica de cada país se explica por el factor común, y qué proporción corresponde a factores idiosincráticos o propios de cada economía?
+
+## Justificación del Problema
+
+### Justificación Teórica
+
+La presente investigación desea amplear el conocimiento en el área de la integración económica a nivel regional. A pesar de distintos planteamientos en la literatura, no se ha realizado los esfuerzos suficientes en las investigaciones que relacionan la integración económica con una sincronización ciclica. Por otro lado, la literatura relacionada a la integracion económica buscan la aplicación de teorías a paises latinoamericanos asociados en bloques como el Mercosur o en comparaciones agregadas de la región, lo cual deja un vacio entorno a la aplicación en la Comunidad Andina. Esta investigación se ubica en la intersección de ambos vacíos, aportando evidencia específica sobre el bloque andino mediante un enfoque de sincronización económica.
+
+### Justificación Práctica
+
+Los resultados de esta investigación tiene gran utilidad para diferentes actores económicos. En un primer lugar, para los actores de políticas económicas, en tanto pueden conocer los efectos de coordinaciones macroeconómicas y las posibles respuestas que pueden desembocar gracias al conocimiento de el grado de interaccion entre los países de la Comunidad Andina. 
+
+En segundo lugar, para los actores financieros de la región, quienes pueden estimar riesgos provenientes de una relacion de actividades económicas con las economias de la comunidad andina. 
+
+### Justificación Metodológica
+
+Se propone un diseño metodológico de dos etapas: En primer lugar, la extracción del componente cíclico del producto bruto interno (PBI) de cada país mediante el filtro de Hodrik-Prescott, de uso extendido por su capacidad práctica. Como segundo paso, se utilizará el filtro de Kalman para la estimación de un ciclo común regional. 
+

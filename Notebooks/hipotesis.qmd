@@ -1,0 +1,14 @@
+# Hipótesis
+
+## Hipotesis General
+
+Los ciclos económicos de Perú, Bolivia, Ecuador y Colombia están explicados de manera significativa por un factor cíclico común regional, con un grado de sincronización heterogéneo entre países.
+
+## Hipotesis específica
+
+
+- El factor cíclico común explica una proporción estadísticamente significativa de la varianza cíclica del PBI de al menos tres de los cuatro países analizados.
+
+- El grado de sensibilidad al factor común es heterogéneo entre los cuatro países, siendo significativamente mayor en Perú y Colombia que en Bolivia.
+
+- La proporción de la varianza cíclica explicada por el componente idiosincrático (no común) es mayor en Bolivia que en los demás países de la muestra.

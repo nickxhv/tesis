@@ -1,0 +1,404 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  spanish,
+  11pt,
+  letterpaper,
+  letterpaper,
+  12pt]{book}
+\usepackage{xcolor}
+\usepackage[left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+% Make \paragraph and \subparagraph free-standing
+\makeatletter
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}{
+    \@ifstar
+      \xxxParagraphStar
+      \xxxParagraphNoStar
+  }
+  \newcommand{\xxxParagraphStar}[1]{\oldparagraph*{#1}\mbox{}}
+  \newcommand{\xxxParagraphNoStar}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}{
+    \@ifstar
+      \xxxSubParagraphStar
+      \xxxSubParagraphNoStar
+  }
+  \newcommand{\xxxSubParagraphStar}[1]{\oldsubparagraph*{#1}\mbox{}}
+  \newcommand{\xxxSubParagraphNoStar}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{setspace}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{0}
+\titleformat{\chapter}[display]{\centering\normalfont\bfseries}{}{0pt}{}
+\titleformat{\section}{\raggedright\normalfont\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\raggedright\normalfont\bfseries\itshape}{}{0pt}{}
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries}{}{0pt}{}[.]
+\titlespacing{\subsubsection}{1.27cm}{*1}{1em}
+\titleformat{\paragraph}[runin]{\normalfont\bfseries\itshape}{}{0pt}{}[.]
+\titlespacing{\paragraph}{1.27cm}{*1}{1em}
+\microtypesetup{expansion=false}
+\doublespacing
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Tabla de contenidos}
+\else
+  \newcommand\contentsname{Tabla de contenidos}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{Listado de Figuras}
+\else
+  \newcommand\listfigurename{Listado de Figuras}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{Listado de Tablas}
+\else
+  \newcommand\listtablename{Listado de Tablas}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figura}
+\else
+  \newcommand\figurename{Figura}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Tabla}
+\else
+  \newcommand\tablename{Tabla}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listado}
+\newcommand*\listoflistings{\listof{codelisting}{Listado de Listados}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={es-CO},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\author{}
+\date{}
+\begin{document}
+\frontmatter
+
+
+\mainmatter
+\begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+        {\huge \textbf{Universidad Nacional Mayor de San Marcos}} \\
+        \vspace{3mm}
+        {\large \textbf{Decana de América. Universidad del Perú}} \\
+
+        \vspace{3mm}
+
+        \includegraphics[width=.5\linewidth]{caratula/logo_unmsm.png}
+        \vspace{3mm}
+
+        {\large \textbf{Facultad de Ciencias Económicas}}\\
+        \vspace{1mm}
+        \large{Escuela Profesional de Economía Internacional}
+
+        \vspace{2mm}
+        \begin{spacing}{1.5}
+            {\large \textsc{Evaluación del nivel de sincronización de los ciclos económicos en la región andina (Perú, Bolivia, Ecuador y Colombia) en el periodo de 2000 a 2019}}
+        \end{spacing}
+
+        \vspace{5mm}
+        {\large \textbf{Bach. Nick Xavier Hurtado Valladolid}} \\
+        \vspace{5mm}
+        {\large Proyecto de Tesis para obtener el grado de Licenciado en Economía}
+        \vfill
+        {\huge \textbf{2026}}
+    \end{center}
+\end{titlepage}
+
+\frontmatter
+
+\chapter{Dedicatoria}\label{dedicatoria}
+
+\emph{A mi familia, por el constante apoyo}
+
+\emph{A mi futura novia, Ximena, por su inconmesurable paciencia en mis
+noches de inmsonio para el desarrollo de esta tesis}
+
+\chapter{Agradecimientos}\label{agradecimientos}
+
+\chapter{Resumen}\label{resumen}
+
+\chapter{Abstract}\label{abstract}
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+
+\chapter{Introducción}\label{introducciuxf3n}
+
+Comprenderá la descripción panorámica de los capítulos, guardando una
+secuencia lógica de tal manera que su lectura brinde una imagen
+coherente y resumida del Diseño del Proyecto de investigación a
+desarrollar, que además incluye los ANTECEDENTES informativos y/o
+bibliográficos, también donde se indica la IMPORTANCIA de la
+investigación a realizarse.
+
+\chapter{Definición y Planteamiento del
+Problema}\label{definiciuxf3n-y-planteamiento-del-problema}
+
+\section{Identificación del
+Problema}\label{identificaciuxf3n-del-problema}
+
+\section{Delimitación del Problema}\label{delimitaciuxf3n-del-problema}
+
+\section{Formulación del Problema}\label{formulaciuxf3n-del-problema}
+
+\subsection{Problema General}\label{problema-general}
+
+¿Cuál es el nivel de sincronización de los ciclos económicos de Perú,
+Bolivia, Ecuador y Colombia durante el periodo 2000-2019?
+
+\subsection{Problemas específicos}\label{problemas-especuxedficos}
+
+\begin{itemize}
+\item
+  ¿Existe un factor cíclico común que explique de manera
+  estadísticamente significativa una parte relevante de las
+  fluctuaciones cíclicas del PBI de estos cuatro países?
+\item
+  ¿Cuál es el grado de sensibilidad de cada uno de los cuatro países
+  respecto a dicho factor común?
+\item
+  ¿Qué proporción de la varianza cíclica de cada país se explica por el
+  factor común, y qué proporción corresponde a factores idiosincráticos
+  o propios de cada economía?
+\end{itemize}
+
+\section{Justificación del
+Problema}\label{justificaciuxf3n-del-problema}
+
+\subsection{Justificación Teórica}\label{justificaciuxf3n-teuxf3rica}
+
+La presente investigación desea amplear el conocimiento en el área de la
+integración económica a nivel regional. A pesar de distintos
+planteamientos en la literatura, no se ha realizado los esfuerzos
+suficientes en las investigaciones que relacionan la integración
+económica con una sincronización ciclica. Por otro lado, la literatura
+relacionada a la integracion económica buscan la aplicación de teorías a
+paises latinoamericanos asociados en bloques como el Mercosur o en
+comparaciones agregadas de la región, lo cual deja un vacio entorno a la
+aplicación en la Comunidad Andina. Esta investigación se ubica en la
+intersección de ambos vacíos, aportando evidencia específica sobre el
+bloque andino mediante un enfoque de sincronización económica.
+
+\subsection{Justificación Práctica}\label{justificaciuxf3n-pruxe1ctica}
+
+Los resultados de esta investigación tiene gran utilidad para diferentes
+actores económicos. En un primer lugar, para los actores de políticas
+económicas, en tanto pueden conocer los efectos de coordinaciones
+macroeconómicas y las posibles respuestas que pueden desembocar gracias
+al conocimiento de el grado de interaccion entre los países de la
+Comunidad Andina.
+
+En segundo lugar, para los actores financieros de la región, quienes
+pueden estimar riesgos provenientes de una relacion de actividades
+económicas con las economias de la comunidad andina.
+
+\subsection{Justificación
+Metodológica}\label{justificaciuxf3n-metodoluxf3gica}
+
+Se propone un diseño metodológico de dos etapas: En primer lugar, la
+extracción del componente cíclico del producto bruto interno (PBI) de
+cada país mediante el filtro de Hodrik-Prescott, de uso extendido por su
+capacidad práctica. Como segundo paso, se utilizará el filtro de Kalman
+para la estimación de un ciclo común regional.
+
+\chapter{Hipótesis}\label{hipuxf3tesis}
+
+\section{Hipotesis General}\label{hipotesis-general}
+
+Estimar el nivel de sincronización de los ciclos económicos de Perú,
+Bolivia, Ecuador y Colombia durante el periodo 2000-2019
+
+\section{Hipotesis específica}\label{hipotesis-especuxedfica}
+
+\begin{itemize}
+\item
+  Estimar un factor cíclico común regional que explique las
+  fluctuaciones cíclicas del PBI de los cuatro países mediante un modelo
+  de factor dinámico.
+\item
+  Determinar el grado de sensibilidad (carga factorial) de cada país
+  respecto al factor cíclico común estimado.
+\item
+  Calcular la proporción de la varianza cíclica de cada país explicada
+  por el factor común y por su componente idiosincrático.
+\end{itemize}
+
+\chapter{Objetivos}\label{objetivos}
+
+\section{Objetivos General}\label{objetivos-general}
+
+Estimar el grado de sincronización de los ciclos económicos de Bolivia,
+Colombia, Ecuador y Perú mediante un modelo de espacio de estados con
+filtro de Kalman, en el periodo {[}2000 - 2019{]}.
+
+\section{Objetivos Específicos}\label{objetivos-especuxedficos}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Extraer el componente cíclico del PBI real de cada país mediante un
+  modelo estructural de series de tiempo (tendencia local lineal + ciclo
+  estocástico).
+\item
+  Estimar un factor cíclico común regional y las cargas factoriales de
+  cada país mediante un modelo de factor dinámico.
+\item
+  Comparar los resultados obtenidos con métodos tradicionales (filtro
+  HP, correlaciones, índice de concordancia de Harding-Pagan) para
+  evaluar la robustez de las conclusiones.
+\end{enumerate}
+
+\chapter{Marco Teorico}\label{marco-teorico}
+
+Debe explicitar los aspectos conceptuales y referenciales que explican
+en forma teórica, el fenómeno a investigar. Es importante, por que sin
+su elaboración no es posible el Proyecto de Investigación.
+
+\chapter{Metodología}\label{metodologuxeda}
+
+\section{Consideraciones
+Metodológicas}\label{consideraciones-metodoluxf3gicas}
+
+Se incluirá en forma general, los diferentes métodos y/o técnicas a
+implementarse en el desarrollo del proyecto. Los métodos y/o técnicas
+específicas de recopilación de información, selección y análisis de
+éstos, debiendo incluirse en las respectivas etapas o fases a considerar
+
+\chapter{Esquema del proyecto de
+investigación}\label{esquema-del-proyecto-de-investigaciuxf3n}
+
+Escogido el problema apropiado, se establecerá en forma concreta los
+aspectos del contenido del proyecto y /o Trabajo de Investigación a
+desarrollarse sobre la base de un esquema capitular tentativo. La
+estructura interna del trabajo de Investigación es la parte más
+importante, cada uno de los
+
+aspectos debe estar itemizado en capítulos y/o subcapítulos, guardando
+una secuencia lógica con la hipótesis a demostrar de tal forma que cada
+paso a seguir permita llegar a conclusiones.
+
+\backmatter
+
+\chapter{Bibliografía}\label{bibliografuxeda}
+
+\chapter{Anexos}\label{anexos}
+
+
+\backmatter
+
+
+\end{document}

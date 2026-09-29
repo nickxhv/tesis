@@ -1,0 +1,118 @@
+---
+institute: "Facultad de Ciencias económicas" 
+date: ""
+lang: "es-CO"
+format:
+  pdf:
+    pdf-engine: pdflatex
+    papersize: letter
+    keep-tex: true
+    documentclass: book
+    toc: false
+    fontsize: 11pt
+    # fontfamily: "kpfonts"
+    number-sections: false
+    classoption: ["letterpaper", "12pt"]
+    geometry: "left=2.5cm,right=2cm,top=2cm,bottom=2cm"
+    # include-before-body: caratula/cover_page.tex
+    header-includes:
+    - \usepackage{setspace}
+    - \usepackage{titlesec}
+    - \setcounter{secnumdepth}{0}
+    - \titleformat{\chapter}[display]{\centering\normalfont\bfseries}{}{0pt}{}
+    - \titleformat{\section}{\raggedright\normalfont\bfseries}{}{0pt}{}
+    - \titleformat{\subsection}{\raggedright\normalfont\bfseries\itshape}{}{0pt}{}
+    - \titleformat{\subsubsection}[runin]{\normalfont\bfseries}{}{0pt}{}[.]
+    - \titlespacing{\subsubsection}{1.27cm}{*1}{1em}
+    - \titleformat{\paragraph}[runin]{\normalfont\bfseries\itshape}{}{0pt}{}[.]
+    - \titlespacing{\paragraph}{1.27cm}{*1}{1em}
+    - \microtypesetup{expansion=false}
+    - \doublespacing
+---
+
+```{=latex}
+\begin{titlepage}
+	\thispagestyle{empty}
+	\begin{center}
+		{\huge \textbf{Universidad Nacional Mayor de San Marcos}} \\
+		\vspace{3mm}
+		{\large \textbf{Decana de América. Universidad del Perú}} \\
+
+		\vspace{3mm}
+
+		\includegraphics[width=.5\linewidth]{caratula/logo_unmsm.png}
+		\vspace{3mm}
+
+		{\large \textbf{Facultad de Ciencias Económicas}}\\
+		\vspace{1mm}
+		\large{Escuela Profesional de Economía Internacional}
+
+		\vspace{2mm}
+		\begin{spacing}{1.5}
+			{\large \textsc{Evaluación del nivel de sincronización de los ciclos económicos en la región andina (Perú, Bolivia, Ecuador y Colombia) en el periodo de 2000 a 2019}}
+		\end{spacing}
+
+		\vspace{5mm}
+		{\large \textbf{Bach. Nick Xavier Hurtado Valladolid}} \\
+		\vspace{5mm}
+		{\large Proyecto de Tesis para obtener el grado de Licenciado en Economía}
+		\vfill
+		{\huge \textbf{2026}}
+	\end{center}
+\end{titlepage}
+```
+
+
+\frontmatter
+
+# Dedicatoria
+
+*A mi familia, por el constante apoyo*
+
+*A mi futura novia, Ximena, por su inconmesurable paciencia en mis noches de inmsonio para el desarrollo de esta tesis*
+
+# Agradecimientos
+
+# Resumen
+
+# Abstract
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+\mainmatter
+
+# Introducción
+
+{{< include introduccion.qmd >}}
+
+# Definición y Planteamiento del Problema
+
+{{< include definicion.qmd >}}
+
+<!-- # Hipotesis -->
+
+{{< include hipotesis.qmd >}}
+
+<!-- # Objetivos -->
+
+{{< include objetivos.qmd >}}
+
+# Marco Teorico
+
+{{< include marco.qmd >}}
+
+# Metodología
+
+{{< include metodologia.qmd >}}
+
+# Esquema del proyecto de investigación
+
+{{< include esquema.qmd >}}
+
+\backmatter
+
+# Bibliografía
+
+# Anexos

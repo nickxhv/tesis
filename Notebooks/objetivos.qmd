@@ -1,0 +1,13 @@
+# Objetivos
+
+## Objetivos General
+
+Estimar el grado de sincronización de los ciclos económicos de Bolivia, Colombia, Ecuador y Perú mediante un modelo de espacio de estados con filtro de Kalman, en el periodo \[2000 - 2019\].
+
+## Objetivos Específicos
+
+1.  Estimar un factor cíclico común regional que explique las fluctuaciones cíclicas del PBI de los cuatro países mediante un modelo de factor dinámico.
+
+2.  Determinar el grado de sensibilidad (carga factorial) de cada país respecto al factor cíclico común estimado.
+
+3.  Calcular la proporción de la varianza cíclica de cada país explicada por el factor común y por su componente idiosincrático.
